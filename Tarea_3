@@ -1,0 +1,22 @@
+def separate(phrase, sep):
+    idx_last = -1
+
+    subphrases = []
+
+    for idx in range(len(phrase)):
+        if phrase[idx] == sep:
+            phrase[idx_last +1:idx]
+            idx_last = idx
+
+    subphrases.append(phrase[idx_last+1:])
+        
+    return subphrases
+
+# Probamos la funcion
+
+txt = input("Dame una frase")
+sep = ':'
+
+sub_txt = separate(txt, sep)
+
+print(sub_txt)
